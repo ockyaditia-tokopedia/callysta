@@ -1,13 +1,13 @@
-name: Delete merged branch
-
 on:
   pull_request:
     types: [closed]
-
+name: Branch Cleanup
 jobs:
-  merge:
+  build:
+    name: branch-cleanup-action
     runs-on: ubuntu-latest
     steps:
-      - uses: SvanBoxel/delete-merged-branch@v1.3.3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: branch-cleanup
+      uses: jessfraz/branch-cleanup-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
