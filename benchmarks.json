@@ -1,0 +1,32 @@
+[
+  {
+    "Date": 1587287929,
+    "Suites": [
+      {
+        "Goos": "linux",
+        "Goarch": "amd64",
+        "Pkg": "github.com/callysta",
+        "Benchmarks": [
+          {
+            "Name": "BenchmarkRegex-4",
+            "Runs": 300000,
+            "NsPerOp": 6126,
+            "Mem": {
+              "BytesPerOp": 5408,
+              "AllocsPerOp": 69
+            }
+          },
+          {
+            "Name": "BenchmarkParse-4",
+            "Runs": 20000000,
+            "NsPerOp": 122,
+            "Mem": {
+              "BytesPerOp": 0,
+              "AllocsPerOp": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
