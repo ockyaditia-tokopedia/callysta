@@ -1,0 +1,16 @@
+name: Send LGTM Image
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review:
+    types: [submitted]
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ddradar/lgtm-action@v1
+        with:
+          image-url: "https://i.gyazo.com/57f7ffa055a864cf6f70dc14b3b67abf.gif"
+          search-pattern: |
+            ^(lgtm|LGTM)$
+            ^:\+1:$
